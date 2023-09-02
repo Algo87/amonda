@@ -54,6 +54,11 @@
         list-style-type: none;
     }
 
+    button,
+    a {
+        cursor: pointer;
+    }
+
     body {
         font-size: 16px;
         line-height: 1.5;
@@ -137,7 +142,7 @@
         align-items: center;
     }
 
-    @media screen and (max-width: 1025px) {
+    @media screen and (max-width: 1200px) {
         .am_content {
             width: calc(100% - 100px);
             margin: 0 auto;
@@ -149,7 +154,7 @@
 
     }
 
-    @media screen and (max-width: 883px) {
+    @media screen and (max-width: 1023px) {
         .am_content {
             width: calc(100% - 60px);
             margin: 0 auto;
@@ -210,7 +215,7 @@
         }
 
 
-        @media screen and (max-width: 1025px) {
+        @media screen and (max-width: 1200px) {
             .am_logo-part {
                 display: none;
             }
@@ -289,11 +294,12 @@
                 margin-left: auto;
                 margin-right: 10px;
             }
+
         }
 
     </style>
     <div class="am_header am_content">
-        <div class="am_logo-block">Amonga <span class="am_logo-part">Product</span></div>
+        <div class="am_logo-block"><a href="/">Amonga <span class="am_logo-part">Product</span></a></div>
 
         <ul role="menu" class="active-branch am_menu-block">
             <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children active-branch am_menu-item" role="none">
@@ -432,7 +438,7 @@
             border-radius: 16px;
         }
 
-        @media screen and (max-width: 1025px) {
+        @media screen and (max-width: 1200px) {
             .am_main-block {
                 flex-wrap: wrap;
             }
@@ -526,17 +532,20 @@
             top: 0;
             z-index: 1;
         }
-        .am_slider-sm-block:before{
+
+        .am_slider-sm-block:before {
             right: 0;
             background: linear-gradient(-90deg, rgba(255, 255, 255, 0.9) 29.17%, rgba(255, 255, 255, 0) 100%);
 
         }
-        .am_slider-sm-block:after{
+
+        .am_slider-sm-block:after {
             left: 0;
             background: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 29.17%, rgba(255, 255, 255, 0) 100%);
 
         }
-        @media screen and (max-width: 1025px) {
+
+        @media screen and (max-width: 1200px) {
             .am_slider-sm {
                 flex-wrap: wrap;
             }
@@ -613,7 +622,7 @@
             flex-wrap: wrap;
         }
 
-        @media screen and (max-width: 1025px) {
+        @media screen and (max-width: 1200px) {
             .am_overview-wrap {
                 flex-wrap: wrap;
             }
@@ -679,105 +688,118 @@
 
 </div>
 
-<!--<div class="am_content am_section-padding">-->
-<!--    <style>-->
-<!--        .am_tab-head {-->
-<!--            color: #21272A;-->
-<!--            font-size: 20px;-->
-<!--            font-weight: 400;-->
-<!--            line-height: 20px;-->
-<!--            display: flex;-->
-<!--            justify-content: space-between;-->
-<!--            align-items: center;-->
-<!--            position: relative;-->
-<!--        }-->
+<div class="am_content am_section-padding">
+    <style>
+        .am_tab-head {
+            color: #21272A;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            position: relative;
+            flex-wrap: wrap;
 
-<!--        .am_tab-head:before {-->
-<!--            position: absolute;-->
-<!--            content: "";-->
-<!--            bottom: 0;-->
-<!--            width: 100%;-->
-<!--            height: 1px;-->
-<!--            background-color: #697077;-->
-<!--            opacity: 0.5;-->
-<!--        }-->
+        }
 
-<!--        .am_tab-head-item {-->
-<!--            opacity: 0.5;-->
-<!--            padding: 0 42px 18px;-->
-<!--            position: relative;-->
+        /*.am_tab-head:before {*/
+        /*    position: absolute;*/
+        /*    content: "";*/
+        /*    bottom: 0;*/
+        /*    width: 100%;*/
+        /*    height: 1px;*/
+        /*    background-color: #697077;*/
+        /*    opacity: 0.5;*/
+        /*}*/
 
-<!--        }-->
+        .am_tab-head-item {
+            opacity: 0.5;
+            padding: 0 42px 18px;
+            position: relative;
+            text-align: center;
+            width: 25%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-<!--        .am_tab-head-item.active {-->
-<!--            opacity: 1;-->
-<!--            color: #048EA7;-->
+        .am_tab-head-item.active {
+            opacity: 1;
+            color: #048EA7;
 
-<!--        }-->
+        }
 
-<!--        .am_tab-head-item:before {-->
-<!--            position: absolute;-->
-<!--            content: "";-->
-<!--            bottom: 0;-->
-<!--            left: 0;-->
-<!--            width: 100%;-->
-<!--            height: 1px;-->
-<!--            background-color: #697077;-->
-<!--            opacity: 0.5;-->
-<!--        }-->
+        .am_tab-head-item:before {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #697077;
+            opacity: 0.5;
+        }
 
-<!--        .am_tab-head-item.active:before {-->
-<!--            background-color: #048EA7;-->
-<!--            opacity: 1;-->
-<!--            height: 3px;-->
-<!--            bottom: -1px;-->
-<!--        }-->
+        .am_tab-head-item.active:before {
+            background-color: #048EA7;
+            opacity: 1;
+            height: 3px;
+            bottom: -1px;
+        }
 
-<!--        .am_tab-body-item {-->
-<!--            display: none;-->
-<!--        }-->
+        .am_tab-body-item {
+            display: none;
+        }
 
-<!--        .am_tab-body-item.active {-->
-<!--            display: block;-->
-<!--            padding: 24px;-->
-<!--            text-align: center;-->
-<!--        }-->
+        .am_tab-body-item.active {
+            display: block;
+            padding: 24px;
+            text-align: center;
+        }
 
-<!--        @media screen and (max-width: 883px) {-->
-<!--            .am_tab-head {-->
-<!--                flex-wrap: wrap;-->
-<!--            }-->
-<!--        }-->
-<!--    </style>-->
-<!--    <h2 class="am_h2">Why We Should Use Amonga?</h2>-->
-<!--    <div class="am_tab-block">-->
-<!--        <div class="am_tab-head">-->
-<!--            <div class="am_tab-head-item active" data-tab="1">Best Performance</div>-->
-<!--            <div class="am_tab-head-item" data-tab="2"> Easy User Experience</div>-->
-<!--            <div class="am_tab-head-item" data-tab="3"> Affordable Prices</div>-->
-<!--            <div class="am_tab-head-item" data-tab="4"> Multiple Services</div>-->
-<!--        </div>-->
-<!--        <div class="am_tab-body">-->
-<!--            <div class="am_tab-body-item active" data-tab="1">Best Performance content</div>-->
-<!--            <div class="am_tab-body-item" data-tab="2">Easy User Experience</div>-->
-<!--            <div class="am_tab-body-item" data-tab="3">Affordable Prices</div>-->
-<!--            <div class="am_tab-body-item" data-tab="4">Multiple Services</div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <script defer>-->
-<!--      function toggleTab() {-->
-<!--        $(".am_tab-head-item").on("click", function () {-->
-<!--          let dataTab = $(this).attr("data-tab");-->
-<!--          $(".am_tab-head-item").removeClass("active");-->
-<!--          $(this).addClass("active");-->
-<!--          $(".am_tab-body-item").removeClass("active");-->
-<!--          $(`.am_tab-body-item[data-tab=${dataTab}]`).addClass("active");-->
-<!--        })-->
-<!--      }-->
+        @media screen and (max-width: 1023px) {
+            .am_tab-head {
+                flex-wrap: wrap;
+            }
 
-<!--      toggleTab()-->
-<!--    </script>-->
-<!--</div>-->
+            .am_tab-head-item {
+                width: 50%;
+                padding-top: 16px;
+                font-size: 18px;
+                line-height: 22px;
+            }
+        }
+    </style>
+    <h2 class="am_h2">Why We Should Use Amonga?</h2>
+    <div class="am_tab-block">
+        <div class="am_tab-head">
+            <div class="am_tab-head-item active" data-tab="1">Best Performance</div>
+            <div class="am_tab-head-item" data-tab="2"> Easy User Experience</div>
+            <div class="am_tab-head-item" data-tab="3"> Affordable Prices</div>
+            <div class="am_tab-head-item" data-tab="4"> Multiple Services</div>
+        </div>
+        <div class="am_tab-body">
+            <div class="am_tab-body-item active" data-tab="1">Best Performance content</div>
+            <div class="am_tab-body-item" data-tab="2">Easy User Experience</div>
+            <div class="am_tab-body-item" data-tab="3">Affordable Prices</div>
+            <div class="am_tab-body-item" data-tab="4">Multiple Services</div>
+        </div>
+    </div>
+    <script defer>
+      function toggleTab() {
+        $(".am_tab-head-item").on("click", function () {
+          let dataTab = $(this).attr("data-tab");
+          $(".am_tab-head-item").removeClass("active");
+          $(this).addClass("active");
+          $(".am_tab-body-item").removeClass("active");
+          $(`.am_tab-body-item[data-tab=${dataTab}]`).addClass("active");
+        })
+      }
+
+      toggleTab()
+    </script>
+</div>
 
 <div class="am_services am_section-padding am_bg-grey">
     <style>
@@ -908,7 +930,7 @@
         swipe: true,
         responsive: [
           {
-            breakpoint: 1024,
+            breakpoint: 1200,
             settings: {
               // variableWidth: true,
 
@@ -920,7 +942,7 @@
             }
           },
           {
-            breakpoint: 833,
+            breakpoint: 1023,
             settings: {
               variableWidth: false,
 
@@ -975,7 +997,7 @@
             color: #FFFFFF;
         }
 
-        @media screen and (max-width: 1025px) {
+        @media screen and (max-width: 1200px) {
             .am_footer-block {
                 flex-wrap: wrap;
                 gap: 40px;
@@ -984,9 +1006,13 @@
             .am_footer-text {
                 width: 100%;
             }
+
+            .am_footer-links {
+                width: 40%;
+            }
         }
 
-        @media screen and (max-width: 883px) {
+        @media screen and (max-width: 1023px) {
             .am_footer-block {
                 gap: 40px;
             }
