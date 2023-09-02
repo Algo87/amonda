@@ -6,7 +6,15 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script
+
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 </head>
+
 <body>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
@@ -122,7 +130,8 @@
     .w-max-100 {
         max-width: 100%;
     }
-    .am_center{
+
+    .am_center {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -206,6 +215,7 @@
                 display: none;
             }
         }
+
         @media screen and (max-width: 833px) {
             .am_header-mobile-menu {
                 display: block;
@@ -348,10 +358,7 @@
             </div>
         </div>
     </div>
-    <script
-            src="https://code.jquery.com/jquery-3.7.1.min.js"
-            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-            crossorigin="anonymous"></script>
+
     <script>
       function toggleMenu() {
         $(".am_header-burger").on("click", function () {
@@ -434,7 +441,7 @@
                 order: 2;
             }
 
-            .tablet-order:nth-child(2){
+            .tablet-order:nth-child(2) {
                 order: 1;
             }
         }
@@ -487,7 +494,49 @@
             font-size: 24px;
             text-wrap: balance;
         }
-        @media screen and (max-width: 1025px){
+
+        .am_slider-filter {
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            min-height: 90px !important;
+        }
+
+        .am_slider-filter img {
+            -webkit-filter: invert(0%) grayscale(100%) brightness(150%);
+            filter: invert(0%) grayscale(100%) brightness(150%);
+            transition: 0.3s;
+        }
+
+        .am_slider-filter:hover img {
+            filter: none;
+            transition: 0.3s;
+        }
+
+        .am_slider-sm-block {
+            position: relative;
+        }
+
+        .am_slider-sm-block:before,
+        .am_slider-sm-block:after {
+            position: absolute;
+            content: "";
+            width: 90px;
+            height: 100%;
+            top: 0;
+            z-index: 1;
+        }
+        .am_slider-sm-block:before{
+            right: 0;
+            background: linear-gradient(-90deg, rgba(255, 255, 255, 0.9) 29.17%, rgba(255, 255, 255, 0) 100%);
+
+        }
+        .am_slider-sm-block:after{
+            left: 0;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 29.17%, rgba(255, 255, 255, 0) 100%);
+
+        }
+        @media screen and (max-width: 1025px) {
             .am_slider-sm {
                 flex-wrap: wrap;
             }
@@ -498,20 +547,17 @@
         leading companies
     </div>
     <div class="am_w-60 am_slider-sm-block w-tablet-100">
-        <div>your content1</div>
-        <div>your content2</div>
-        <div>your content3</div>
-        <div>your content4</div>
-        <div>your content5</div>
-        <div>your content6</div>
-    </div>
+        <div class="am_slider-filter"><img src="img/louis-vuitton.svg" alt="slider item"></div>
+        <div class="am_slider-filter"><img src="img/slack.svg" alt="slider item"></div>
+        <div class="am_slider-filter"><img src="img/louis-vuitton.svg" alt="slider item"></div>
+        <div class="am_slider-filter"><img src="img/slack.svg" alt="slider item"></div>
+        <div class="am_slider-filter"><img src="img/louis-vuitton.svg" alt="slider item"></div>
+        <div class="am_slider-filter"><img src="img/slack.svg" alt="slider item"></div>
+        <div class="am_slider-filter"><img src="img/louis-vuitton.svg" alt="slider item"></div>
+        <div class="am_slider-filter"><img src="img/slack.svg" alt="slider item"></div>
 
-    <!--    <script-->
-    <!--            src="https://code.jquery.com/jquery-3.7.1.min.js"-->
-    <!--            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="-->
-    <!--            crossorigin="anonymous"></script>-->
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script>
+    </div>
+    <script defer>
       $('.am_slider-sm-block').slick({
         infinite: true,
         slidesToShow: 3,
@@ -718,7 +764,7 @@
 <!--            <div class="am_tab-body-item" data-tab="4">Multiple Services</div>-->
 <!--        </div>-->
 <!--    </div>-->
-<!--    <script>-->
+<!--    <script defer>-->
 <!--      function toggleTab() {-->
 <!--        $(".am_tab-head-item").on("click", function () {-->
 <!--          let dataTab = $(this).attr("data-tab");-->
@@ -854,7 +900,7 @@
             </div>
         </div>
     </div>
-    <script>
+    <script defer>
       $(".am_slider-img-top").slick({
         infinite: true,
         slidesToShow: 4,
@@ -898,7 +944,7 @@
         }
 
         .am_footer-text {
-
+            width: 50%;
         }
 
         .am_footer-desc {
@@ -913,28 +959,35 @@
             gap: 12px;
         }
 
-        .am_footer-link{
-            color:#fff;
+        .am_footer-link {
+            color: #fff;
             padding: 10px 0;
             text-decoration: none;
             text-wrap: none;
             display: block;
 
         }
-        .am_copyright{
+
+        .am_copyright {
             border-top: 1px solid #FFFFFF;
             padding: 24px;
             text-align: center;
-            color:#FFFFFF;
+            color: #FFFFFF;
         }
-        @media screen and (max-width: 1025px){
-            .am_footer-block{
+
+        @media screen and (max-width: 1025px) {
+            .am_footer-block {
                 flex-wrap: wrap;
                 gap: 40px;
             }
+
+            .am_footer-text {
+                width: 100%;
+            }
         }
-        @media screen and (max-width: 883px){
-            .am_footer-block{
+
+        @media screen and (max-width: 883px) {
+            .am_footer-block {
                 gap: 40px;
             }
         }
