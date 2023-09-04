@@ -999,7 +999,8 @@
                 gap: 16px;
                 flex-wrap: wrap;
             }
-            .am_block-demo-inner-title{
+
+            .am_block-demo-inner-title {
                 width: 100%;
                 text-align: center;
             }
@@ -1258,6 +1259,94 @@
       })
     </script>
 
+
+</div>
+
+<div class="am_bg-grey am_faq">
+    <style>
+        .am_faq-item {
+            padding: 16px 24px 16px 16px;
+            border-radius: 8px;
+            background-color: #FFFFFF;
+            max-width: 886px;
+            margin-bottom: 28px;
+        }
+
+        .am_faq-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .am_faq-desc {
+            display: none;
+        }
+        .am_faq-item.active .am_faq-desc{
+            padding-top: 16px;
+            display: block;
+        }
+
+        .am_add-icon {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #048EA7;
+            border-radius: 7px;
+        }
+    </style>
+    <div class="am_content am_section-padding">
+        <h2 class="am_h2">Frequently Asked questions</h2>
+        <div class="am_faq-item">
+            <div class="am_faq-title">
+                <span>Who should use the system?</span>
+                <span class="am_add-icon"><img src="img/add-icon.svg" alt="show description"/></span>
+            </div>
+            <div class="am_faq-desc">The perfect way to start your journey
+                with Quickly. All the main features great
+                for small teams
+            </div>
+        </div>
+        <div class="am_faq-item">
+            <div class="am_faq-title">
+                <span>Who should use the system?</span>
+                <span class="am_add-icon"><img src="img/add-icon.svg" alt="show description"/></span>
+            </div>
+            <div class="am_faq-desc">The perfect way to start your journey
+                with Quickly. All the main features great
+                for small teams
+            </div>
+        </div>
+        <div class="am_faq-item">
+            <div class="am_faq-title">
+                <span>Who should use the system?</span>
+                <span class="am_add-icon"><img src="img/add-icon.svg" alt="show description"/></span>
+            </div>
+            <div class="am_faq-desc">The perfect way to start your journey
+                with Quickly. All the main features great
+                for small teams
+            </div>
+        </div>
+        <div class="am_faq-item">
+            <div class="am_faq-title">
+                <span>Who should use the system?</span>
+                <span class="am_add-icon"><img src="img/add-icon.svg" alt="show description"/></span>
+            </div>
+            <div class="am_faq-desc">The perfect way to start your journey
+                with Quickly. All the main features great
+                for small teams
+            </div>
+        </div>
+    </div>
+    <script defer>
+      $(".am_faq-item").on("click", function () {
+        $(this).toggleClass("active");
+
+      })
+    </script>
 
 </div>
 
