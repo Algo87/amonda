@@ -90,6 +90,11 @@
         border: 2px solid #048EA7;
     }
 
+    .am-btn-white {
+        background-color: #fff;
+        color: #0B8298;
+    }
+
     .mr-10 {
         margin-right: 10px;
     }
@@ -111,6 +116,12 @@
         font-weight: 400;
         text-align: center;
         padding-bottom: 42px;
+    }
+
+    .am_h3 {
+        font-size: 20px;
+        line-height: 30px;
+        text-align: center;
     }
 
     .am_more-link {
@@ -140,6 +151,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .am_grey-badge {
+        background-color: #F2F4F8;
+        font-size: 12px;
+        line-height: 20px;
+        padding: 0 10px;
+        border-radius: 10px;
     }
 
     @media screen and (max-width: 1200px) {
@@ -957,6 +976,289 @@
         ]
       })
     </script>
+</div>
+<div class="am_block-demo">
+    <style>
+        .am_block-demo {
+            padding: 29px 0;
+            background: linear-gradient(270deg, #007D94 0%, #FFFFFF 100%);
+        }
+
+        .am_block-demo-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 20px;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        @media screen and (max-width: 1023px) {
+            .am_block-demo-inner {
+                justify-content: center;
+                gap: 16px;
+                flex-wrap: wrap;
+            }
+            .am_block-demo-inner-title{
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+    <div class="am_content am_block-demo-inner">
+        <div class="am_block-demo-inner-title">Try A demo version of Amonga for free</div>
+        <button class="am_btn am-btn-white"> Explore Demo Version</button>
+    </div>
+</div>
+<div class="am_pricing-block am_content am_section-padding">
+    <style>
+        .am_pricing-checkout-block {
+            display: flex;
+        }
+
+        .am_pricing-top {
+            padding: 32px 0;
+        }
+
+        .am_checkbox {
+            position: absolute;
+            width: 0;
+            height: 0;
+            z-index: -1;
+            left: -10000px;
+        }
+
+        .am_checkbox-toggle {
+            position: relative;
+            width: 32px;
+            height: 16px;
+            margin: 0 8px;
+        }
+
+        .am_checkbox-label {
+            position: absolute;
+            width: 100%;
+            height: 17px;
+            background-color: #048EA7;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-bottom: 0;
+        }
+
+        .slider {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+
+        input:checked ~ .slider {
+            background-color: #048EA7;
+        }
+
+        .slider::before {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #fff;
+            transition: 0.3s;
+        }
+
+        input:checked ~ .slider::before {
+            transform: translateX(14px);
+            background-color: #fff;
+            box-shadow: none;
+        }
+
+        .am_pricing-checkout-block {
+            display: flex;
+            align-items: center;
+        }
+
+        .am_pricing-title {
+            font-weight: 600;
+            font-size: 24px;
+            color: #048EA7;
+            margin: 0;
+            padding-bottom: 42px;
+
+        }
+
+        .am_price-sum {
+            font-size: 50px;
+            font-weight: 400;
+            line-height: 60px;
+            text-align: left;
+            color: #060026;
+            padding-bottom: 20px;
+        }
+
+        .am_price-sum-sub {
+            font-size: 24px;
+            line-height: 1;
+            color: #048EA7;
+        }
+
+        .am_price-list {
+            margin: 0;
+            padding: 40px 0;
+        }
+
+        .am_price-list-item {
+            padding-left: 44px;
+            position: relative;
+            margin: 12px 0;
+        }
+
+        .am_price-list-item:before {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: 0;
+            border-radius: 7px;
+            width: 24px;
+            height: 24px;
+            background-color: #FF9600;
+            background-image: url("/img/arrow-price.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .am_pricing-slider-item {
+            background-color: #FAFAFA;
+            border-radius: 24px;
+            padding: 32px;
+        }
+
+        .am_pricing-block .slick-slide {
+            margin: 0 16px;
+        }
+
+        .am_pricing-block .slick-list {
+            margin: 0 -16px;
+        }
+    </style>
+    <h3 class="am_h3">Amonga Pricing</h3>
+    <div class="am_pricing-top">
+        <span class="am_grey-badge">20% OFF</span>
+        <div class="am_pricing-checkout-block">
+            <div data-checkbox="1">Yearly</div>
+            <div class="am_checkbox-toggle">
+                <label class="am_checkbox-label">
+                    <input type='checkbox' class="am_checkbox">
+                    <span class='slider'></span>
+                </label>
+            </div>
+            <div data-checkbox="2">Monthly</div>
+        </div>
+    </div>
+
+
+    <div class="am_pricing-slider">
+        <div class="am_pricing-slider-item">
+            <h5 class="am_pricing-title">The Starter Pack</h5>
+            <div class="am_price-sum">$19.99 <span class="am_price-sum-sub">/mo</span></div>
+            <div> The perfect way to start your journey
+                with Quickly. All the main features great
+                for small teams
+            </div>
+            <ul class="am_price-list">
+                <li class="am_price-list-item">Project tracking</li>
+                <li class="am_price-list-item">24 hour support</li>
+                <li class="am_price-list-item">Unlimited tasks</li>
+                <li class="am_price-list-item">Roadmap planning</li>
+            </ul>
+            <button class="am_btn am_btn_primary">Get Started</button>
+        </div>
+        <div class="am_pricing-slider-item">
+            <h5 class="am_pricing-title">The Starter Pack</h5>
+            <div class="am_price-sum">$19.99 <span class="am_price-sum-sub">/mo</span></div>
+            <div> The perfect way to start your journey
+                with Quickly. All the main features great
+                for small teams
+            </div>
+            <ul class="am_price-list">
+                <li class="am_price-list-item">Project tracking</li>
+                <li class="am_price-list-item">24 hour support</li>
+                <li class="am_price-list-item">Unlimited tasks</li>
+                <li class="am_price-list-item">Roadmap planning</li>
+            </ul>
+            <button class="am_btn am_btn_primary">Get Started</button>
+        </div>
+        <div class="am_pricing-slider-item">
+            <h5 class="am_pricing-title">The Starter Pack</h5>
+            <div class="am_price-sum">$19.99 <span class="am_price-sum-sub">/mo</span></div>
+            <div> The perfect way to start your journey
+                with Quickly. All the main features great
+                for small teams
+            </div>
+            <ul class="am_price-list">
+                <li class="am_price-list-item">Project tracking</li>
+                <li class="am_price-list-item">24 hour support</li>
+                <li class="am_price-list-item">Unlimited tasks</li>
+                <li class="am_price-list-item">Roadmap planning</li>
+            </ul>
+            <button class="am_btn am_btn_primary">Get Started</button>
+        </div>
+        <div class="am_pricing-slider-item">
+            <h5 class="am_pricing-title">The Starter Pack</h5>
+            <div class="am_price-sum">$19.99 <span class="am_price-sum-sub">/mo</span></div>
+            <div> The perfect way to start your journey
+                with Quickly. All the main features great
+                for small teams
+            </div>
+            <ul class="am_price-list">
+                <li class="am_price-list-item">Project tracking</li>
+                <li class="am_price-list-item">24 hour support</li>
+                <li class="am_price-list-item">Unlimited tasks</li>
+                <li class="am_price-list-item">Roadmap planning</li>
+            </ul>
+            <button class="am_btn am_btn_primary">Get Started</button>
+        </div>
+    </div>
+
+    <script defer>
+      $(".am_pricing-slider").slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        swipe: true,
+        responsive: [
+          {
+            breakpoint: 1200,
+            settings: {
+              // variableWidth: true,
+
+              // centerMode: true,
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 1023,
+            settings: {
+              variableWidth: false,
+
+              enterMode: false,
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          },
+          // You can unslick at a given breakpoint now by adding:
+          // settings: "unslick"
+          // instead of a settings object
+        ]
+      })
+    </script>
+
+
 </div>
 
 <footer class="am_footer">
