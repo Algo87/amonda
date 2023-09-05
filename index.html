@@ -70,6 +70,8 @@
     .am_content {
         width: 1200px;
         margin: 0 auto;
+        padding-left: 16px;
+        padding-right: 16px;
     }
 
     .am_btn {
@@ -113,6 +115,14 @@
 
     .am_w-100 {
         width: 100%;
+    }
+
+    .am_w-50 {
+        width: 50%;
+    }
+
+    .am_d-flex {
+        display: flex;
     }
 
     .px-50 {
@@ -169,10 +179,46 @@
         border-radius: 10px;
     }
 
+    .am_main-title {
+        font-size: 40px;
+        position: relative;
+        display: inline;
+        z-index: 1;
+    }
+
+    .am_main-title:after {
+        position: absolute;
+        content: "";
+        width: 70%;
+        height: 50%;
+        z-index: -1;
+        right: -16px;
+        bottom: -4px;
+        background-color: #048EA7;
+    }
+
+    .block-second {
+        order: 2;
+    }
+
+    .am_max-width-100 {
+        max-width: 100%;
+    }
+
+    .gap-30 {
+        gap: 30px;
+    }
+
+    .py-32 {
+        padding: 32px 0;
+    }
+
     @media screen and (max-width: 1200px) {
         .am_content {
             width: calc(100% - 100px);
             margin: 0 auto;
+            padding-left: 16px;
+            padding-right: 16px;
         }
 
         .w-tablet-100 {
@@ -185,10 +231,16 @@
         .am_content {
             width: calc(100% - 60px);
             margin: 0 auto;
+            padding-left: 16px;
+            padding-right: 16px;
         }
 
         .w-mobile-100 {
             width: 100% !important;
+        }
+
+        .block-second-for-mobile {
+            order: 2;
         }
 
     }
@@ -419,22 +471,6 @@
             gap: 30px;
         }
 
-        .am_main-title {
-            font-size: 40px;
-            position: relative;
-            display: inline;
-        }
-
-        .am_main-title:after {
-            position: absolute;
-            content: "";
-            width: 70%;
-            height: 50%;
-            z-index: -1;
-            right: -16px;
-            bottom: -4px;
-            background-color: #048EA7;
-        }
 
         .am_main-text {
             padding: 30px 0;
@@ -1148,7 +1184,7 @@
             border-radius: 24px;
             padding: 32px;
             min-height: 100%;
-            width: 30%!important;
+            width: 30% !important;
             /*display: flex!important;*/
             /*align-items: stretch;*/
         }
@@ -1368,6 +1404,48 @@
 
       })
     </script>
+
+</div>
+<div style="background-color: #FFFFFF; height: 40px;"></div>
+<div class="am_bg-grey am_section-padding">
+    <div class="am_content am_d-flex gap-30">
+        <!--       добавить класс block-second если первый блок должен отображаться справа -->
+        <!--       добавить класс block-second-for-mobile если первый блок должен отображаться под вторым -->
+        <div class="am_w-50 block-second-for-mobile w-mobile-100">
+            <h1 class="am_main-title">Our Product</h1>
+            <div class="py-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                ut labore et
+                dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus vitae congue mauris rhoncus
+                aenean vel elit scelerisque In egestas erat imperdiet sed euismod nisi porta lorem mollis Morbi
+                tristique.
+                eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi
+                Arcu cursus vitae congue mauris rhoncus aenean vel elit scelerisque.
+            </div>
+        </div>
+        <div class="am_w-50 w-mobile-100">
+            <img class="am_max-width-100" src="img/main-img.png"/>
+        </div>
+    </div>
+</div>
+
+<div class="am_content am_section-padding am_d-flex gap-30">
+    <!--       добавить класс block-second если первый блок должен отображаться справа -->
+    <!--       добавить класс block-second-for-mobile если первый блок должен отображаться под вторым -->
+
+    <div class="am_w-50 w-mobile-100 block-second">
+        <h1 class="am_main-title">Our Product</h1>
+        <div class="py-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et
+            dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus vitae congue mauris rhoncus
+            aenean vel elit scelerisque In egestas erat imperdiet sed euismod nisi porta lorem mollis Morbi
+            tristique.
+            eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi
+            Arcu cursus vitae congue mauris rhoncus aenean vel elit scelerisque.
+        </div>
+    </div>
+    <div class="am_w-50 w-mobile-100 ">
+        <img class="am_max-width-100" src="img/main-img.png"/>
+    </div>
 
 </div>
 
