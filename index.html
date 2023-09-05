@@ -1104,10 +1104,12 @@
         .am_price-sum {
             font-size: 50px;
             font-weight: 400;
-            line-height: 60px;
+            line-height: 1;
             text-align: left;
             color: #060026;
             padding-bottom: 20px;
+            display: flex;
+            align-items: flex-end;
         }
 
         .am_price-sum-sub {
@@ -1146,6 +1148,7 @@
             border-radius: 24px;
             padding: 32px;
             min-height: 100%;
+            width: 30%!important;
             /*display: flex!important;*/
             /*align-items: stretch;*/
         }
@@ -1157,11 +1160,12 @@
             flex-direction: column;
         }
 
-        .slick-track {
+        .am_pricing-slider .slick-track {
             display: flex !important;
+            width: 100% !important;
         }
 
-        .slick-slide {
+        .am_pricing-slider .slick-slide {
             height: inherit !important;
         }
 
@@ -1230,7 +1234,7 @@
         <div class="am_pricing-slider-item">
             <div>
                 <h5 class="am_pricing-title">The Starter Pack</h5>
-                <div class="am_price-sum">$19.99 <span class="am_price-sum-sub">/mo</span></div>
+                <div class="am_price-sum">300.99 <span class="am_price-sum-sub">/mo</span></div>
                 <div> The perfect way to start your journey
                     with Quickly. All the main features great
                     for small teams
@@ -1244,23 +1248,7 @@
             </div>
             <a href="/" class="am_btn am_btn_primary am_w-100">Get Started</a>
         </div>
-        <div class="am_pricing-slider-item">
-            <div>
-                <h5 class="am_pricing-title">The Starter Pack</h5>
-                <div class="am_price-sum">$19.99 <span class="am_price-sum-sub">/mo</span></div>
-                <div> The perfect way to start your journey
-                    with Quickly. All the main features great
-                    for small teams
-                </div>
-                <ul class="am_price-list">
-                    <li class="am_price-list-item">Project tracking</li>
-                    <li class="am_price-list-item">24 hour support</li>
-                    <li class="am_price-list-item">Unlimited tasks</li>
-                    <li class="am_price-list-item">Roadmap planning</li>
-                </ul>
-            </div>
-            <a href="/" class="am_btn am_btn_primary am_w-100">Get Started</a>
-        </div>
+
     </div>
 
     <script defer>
@@ -1372,16 +1360,7 @@
                 for small teams
             </div>
         </div>
-        <div class="am_faq-item">
-            <div class="am_faq-title">
-                <span>Who should use the system?</span>
-                <span class="am_add-icon"><img src="img/add-icon.svg" alt="show description"/></span>
-            </div>
-            <div class="am_faq-desc">The perfect way to start your journey
-                with Quickly. All the main features great
-                for small teams
-            </div>
-        </div>
+
     </div>
     <script defer>
       $(".am_faq-item").on("click", function () {
