@@ -444,6 +444,10 @@ body {
         padding-bottom: 4px;
         padding-top: 4px;
     }
+    .am_sub-menu-link.active,
+    .am_sub-menu-link:hover {
+        color: #0B8298;
+    }
 }
 
 /******* HEADER ******/

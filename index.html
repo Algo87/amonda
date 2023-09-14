@@ -18,139 +18,6 @@
 <body>
 
 <header>
-    <style>
-        .am_header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 16px 0;
-        }
-
-        .am_logo-block a,
-        .am_logo-block {
-            font-size: 24px;
-            font-weight: 600;
-            letter-spacing: 0;
-            text-align: left;
-            color: #048EA7;
-            padding-right: 24px;
-            text-decoration: none;
-        }
-
-
-        .am_menu-block {
-            display: flex;
-            align-items: center;
-            padding: 0 16px;
-        }
-
-        .am_menu-link {
-            font-size: 16px;
-            font-weight: 400;
-            padding: 16px;
-            color: #232323;
-            text-decoration: none;
-        }
-
-        .am_header-burger {
-            width: 24px;
-            height: 24px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .am_header-mobile-menu {
-            display: none;
-        }
-
-        .am_header-btn-block {
-            display: flex;
-        }
-
-        @media screen and (max-width: 1200px) {
-            .am_logo-part {
-                display: none;
-            }
-        }
-
-        @media screen and (max-width: 833px) {
-            .am_header-mobile-menu {
-                display: block;
-            }
-
-            .am_menu-block {
-                display: none;
-            }
-
-            .am_menu-block-mobile {
-                background-color: silver;
-                padding: 16px 30px;
-            }
-
-            .am_header-burger-menu {
-                position: fixed;
-                right: -100vw;
-                width: 100vw;
-                top: 0;
-                height: 100%;
-                transition: 0.6s;
-
-            }
-
-            .am_header-burger-menu.open {
-                right: 0;
-                transition: 0.6s;
-                z-index: 1;
-            }
-
-            .am_header-burger-header {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 16px 30px;
-            }
-
-            .am_header-burger-close {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .am_header-burger-close img {
-                width: 24px;
-                height: 24px;
-            }
-
-            .am_header-burger-menu-wrapper {
-                background-color: #F6F6F6;
-            }
-
-            .am_menu-link {
-                padding: 4px 0;
-            }
-
-            .am_menu-link.active {
-                color: #048EA7;
-            }
-
-            .am_menu-link:hover {
-                color: #048EA7;
-            }
-
-
-            .am_header {
-                justify-content: start;
-            }
-
-            .am_header-btn-block {
-                margin-left: auto;
-                margin-right: 10px;
-            }
-
-        }
-
-    </style>
     <div class="am_header am_content">
         <div class="am_logo-block"><a href="/">Amonga <span class="am_logo-part">Product</span></a></div>
 
@@ -158,8 +25,30 @@
             <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children active-branch am_menu-item" role="none">
                 <a href="#" class="am_menu-link" aria-haspopup="true" aria-expanded="false" role="menuitem">Product</a>
             </li>
-            <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children active-branch am_menu-item" role="none">
-                <a href="#" class="am_menu-link" aria-haspopup="true" aria-expanded="false" role="menuitem">Pricing</a>
+            <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children active-branch am_menu-item am_menu-item-has-sub"
+                role="none">
+                <div class="am_menu-link am_sub-link" aria-haspopup="true" aria-expanded="false" role="menuitem">
+                    Pricing
+                    <div class="am_sub-menu-trigger">
+                        <img src="img/menu-arrow.svg"/>
+                    </div>
+                </div>
+                <!--      если есть субменю   -->
+
+                <ul class="am_sub-menu">
+                    <li class="am_sub-menu-item">
+                        <a class="am_sub-menu-link" href="#">Product</a>
+                    </li>
+                    <li class="am_sub-menu-item">
+                        <a class="am_sub-menu-link" href="#">Services</a>
+                    </li>
+                    <li class="am_sub-menu-item">
+                        <a class="am_sub-menu-link" href="#">Services</a>
+                    </li>
+                    <li class="am_sub-menu-item">
+                        <a class="am_sub-menu-link" href="#">Demo Version</a>
+                    </li>
+                </ul>
             </li>
             <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children active-branch am_menu-item" role="none">
                 <a href="#" class="am_menu-link" aria-haspopup="true" aria-expanded="false" role="menuitem">About Us</a>
@@ -181,7 +70,7 @@
                 <img src="img/burger.svg" alt="menu"/>
             </div>
             <div class="am_header-burger-menu">
-                <div class="am_header-burger-menu-wrapper">
+                <li class="am_header-burger-menu-wrapper">
                     <div class="am_header-burger-header">
                         <div class="am_logo-block">Amonga <span class="am_logo-part">Product</span></div>
                         <div class="am_header-burger-close">
@@ -194,9 +83,31 @@
                             <a href="#" class="am_menu-link active" aria-haspopup="true" aria-expanded="false"
                                role="menuitem">Product</a>
                         </li>
-                        <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children active-branch am_menu-item"
+                        <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children active-branch am_menu-item am_menu-item-has-sub am_menu-item-has-sub--mobile"
                             role="none">
-                            <a href="#" class="am_menu-link" aria-haspopup="true" aria-expanded="false" role="menuitem">Pricing</a>
+                            <div class="am_menu-link am_sub-link" aria-haspopup="true" aria-expanded="false"
+                                 role="menuitem">
+                                Pricing
+                                <div class="am_sub-menu-trigger">
+                                    <img src="img/menu-arrow.svg"/>
+                                </div>
+                            </div>
+                            <ul class="am_sub-menu--mobile">
+                                <li class="am_sub-menu-item">
+                                    <a class="am_sub-menu-link" href="#">Product</a>
+                                </li>
+                                <li class="am_sub-menu-item">
+                                    <a class="am_sub-menu-link" href="#">Services</a>
+                                </li>
+                                <li class="am_sub-menu-item">
+                                    <a class="am_sub-menu-link" href="#">Services</a>
+                                </li>
+                                <li class="am_sub-menu-item">
+                                    <a class="am_sub-menu-link" href="#">Demo Version</a>
+                                </li>
+                            </ul>
+                        </li>
+
                         </li>
                         <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children active-branch am_menu-item"
                             role="none">
@@ -213,9 +124,9 @@
                             <a href="#" class="am_menu-link" aria-haspopup="true" aria-expanded="false" role="menuitem">Services</a>
                         </li>
                     </ul>
-                </div>
             </div>
         </div>
+    </div>
     </div>
 
     <script>
@@ -231,6 +142,14 @@
       }
 
       toggleMenu();
+
+      function subMenuToggle() {
+        $(".am_menu-item-has-sub").on("click", function () {
+          $(".am_menu-item-has-sub").toggleClass("open");
+        })
+      }
+
+      subMenuToggle();
     </script>
 </header>
 <div class="am_main-block am_content">
