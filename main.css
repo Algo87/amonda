@@ -238,6 +238,7 @@ body {
     padding-bottom: 16px;
     display: inline-block;
 }
+
 .h4_underlined:before,
 .h3_underlined:before {
     position: absolute;
@@ -249,7 +250,7 @@ body {
     left: 0;
 }
 
-.h4_underlined{
+.h4_underlined {
     font-size: 20px;
     font-weight: 600;
     line-height: 22px;
@@ -301,9 +302,19 @@ body {
         padding-top: 32px;
         padding-bottom: 32px;
     }
-    .h4_underlined{
+
+    .h4_underlined {
         font-size: 18px;
     }
+
+    .am_sub-menu--mobile {
+        padding-left: 24px;
+    }
+
+    .am_sub-menu--mobile .am_sub-menu-item:after {
+        display: none;
+    }
+
 
 }
 
@@ -321,8 +332,11 @@ body {
     letter-spacing: 0;
     text-align: left;
     color: #048EA7;
-    padding-right: 24px;
     text-decoration: none;
+}
+
+.am_logo-block {
+    padding-right: 24px;
 }
 
 .am_logo-block img {
@@ -341,6 +355,7 @@ body {
     padding: 16px;
     color: #232323;
     text-decoration: none;
+    white-space: nowrap;
 }
 
 
@@ -348,10 +363,86 @@ body {
     display: none;
 }
 
+.am_menu-item {
+    position: relative;
+}
+
+.am_sub-menu {
+    position: absolute;
+    padding: 8px 16px;
+    top: 48px;
+    left: 16px;
+    background-color: #fff;
+    border: 3px solid #F6F6F6;
+    border-radius: 10px;
+    display: none;
+    z-index: 10;
+}
+
+.am_sub-menu-link {
+    color: #232323;
+    text-decoration: none;
+    white-space: nowrap;
+    line-height: 21px;
+}
+
+.am_sub-menu-item:first-child {
+    padding-top: 0;
+}
+
+.am_sub-menu-item {
+    padding-bottom: 8px;
+    padding-top: 8px;
+    position: relative;
+}
+
+.am_sub-menu-item:after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #F6F6F6;
+}
+
+.am_menu-item-has-sub {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.am_menu-item-has-sub.open .am_sub-menu {
+    display: block;
+}
+
+.am_sub-menu-trigger {
+    padding: 4px 8px;
+    transition: 0.3s;
+    display: flex;
+}
+
+.am_menu-item-has-sub.open .am_sub-menu-trigger {
+    transform: rotate(180deg);
+    transition: 0.3s;
+}
+
+.am_menu-link.am_sub-link {
+    display: flex;
+    align-items: center;
+}
 
 @media screen and (max-width: 1200px) {
     .am_logo-part {
         display: none;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .am_sub-menu-item {
+        padding-bottom: 4px;
+        padding-top: 4px;
     }
 }
 
@@ -377,6 +468,104 @@ body {
     display: flex;
 }
 
+@media screen and (max-width: 1200px) {
+    .am_logo-part {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .am_header-mobile-menu {
+        display: block;
+    }
+
+    .am_menu-block {
+        display: none;
+    }
+
+    .am_menu-block-mobile {
+        padding: 16px 30px;
+    }
+
+    .am_header-burger-menu {
+        position: fixed;
+        left: -100vw;
+        width: 100vw;
+        top: 0;
+        height: 100vh;
+        overflow: auto;
+        transition: 0.6s;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 100;
+    }
+
+    .am_header-burger-menu.open {
+        left: 0;
+        transition: 0.6s;
+        z-index: 10;
+    }
+
+    .am_header-burger-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 30px;
+    }
+
+    .am_header-burger-close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .am_header-burger-close img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .am_header-burger-menu-wrapper {
+        background: #FFFFFF;
+        height: 100%;
+        width: 80%;
+    }
+
+    .am_menu-item-has-sub--mobile {
+        display: block;
+    }
+
+    .am_menu-item-has-sub .am_sub-menu--mobile{
+        display: none;
+    }
+
+    .am_menu-item-has-sub.open .am_sub-menu--mobile{
+        display: block;
+    }
+    .am_menu-link {
+        padding: 8px 0;
+        font-size: 20px;
+        line-height: 30px;
+        display: block;
+    }
+
+    .am_menu-link.active {
+        color: #048EA7;
+    }
+
+    .am_menu-link:hover {
+        color: #048EA7;
+    }
+
+
+    .am_header {
+        justify-content: start;
+    }
+
+    .am_header-btn-block {
+        margin-left: auto;
+        margin-right: 10px;
+    }
+
+}
 
 /***** END HEADER ******/
 /****** FOOTER ******/
