@@ -22,45 +22,70 @@
         <div class="am_logo-block"><a href="/">Amonga <span class="am_logo-part">Product</span></a></div>
 
         <ul role="menu" class="active-branch am_menu-block">
-            <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children active-branch am_menu-item" role="none">
-                <a href="#" class="am_menu-link" aria-haspopup="true" aria-expanded="false" role="menuitem">Product</a>
+            <li class="menu__item menu__item--depth-1  am_menu-item hs-skip-lang-url-rewrite">
+                <span class="menu__link">Product</span>
             </li>
-            <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children active-branch am_menu-item am_menu-item-has-sub"
-                role="none">
-                <div class="am_menu-link am_sub-link" aria-haspopup="true" aria-expanded="false" role="menuitem">
-                    Pricing
-                    <div class="am_sub-menu-trigger">
-                        <img src="img/menu-arrow.svg"/>
-                    </div>
-                </div>
-                <!--      если есть субменю   -->
+            <li class="menu__item menu__item--depth-1 menu__item--has-submenu am_menu-item hs-skip-lang-url-rewrite">
+                <a class="menu__link menu__link--toggle" href="#" aria-haspopup="true"
+                   aria-expanded="false">Industries</a>
+                <ul class="menu__submenu menu__submenu--level-2 no-list">
+                    <li class="menu__item menu__item--depth-2  am_menu-item hs-skip-lang-url-rewrite">
+                        <a class="menu__link am_menu-link   " href="https://google.com">Payments</a>
+                    </li>
+                    <li class="menu__item menu__item--depth-2  am_menu-item hs-skip-lang-url-rewrite">
+                        <a class="menu__link am_menu-link   " href="https://google.com">EDIFACT</a>
+                    </li>
+                    <li class="menu__item menu__item--depth-2  am_menu-item hs-skip-lang-url-rewrite">
+                        <span class="menu__link">Insurance</span>
+                    </li>
+                    <li class="menu__item menu__item--depth-2  am_menu-item hs-skip-lang-url-rewrite">
+                        <span class="menu__link">Travel expenses</span>
+                    </li>
+                    <li class="menu__item menu__item--depth-2  am_menu-item hs-skip-lang-url-rewrite">
+                        <span class="menu__link">Furniture</span>
+                    </li>
+                </ul>
 
-                <ul class="am_sub-menu">
-                    <li class="am_sub-menu-item">
-                        <a class="am_sub-menu-link" href="#">Product</a>
+
+            </li>
+            <li class="menu__item menu__item--depth-1 menu__item--has-submenu am_menu-item hs-skip-lang-url-rewrite">
+                <a class="menu__link menu__link--toggle" href="#" aria-haspopup="true" aria-expanded="false">Amonga
+                    Editions</a>
+<!--                <div class="am_menu-link am_sub-link" aria-haspopup="true" aria-expanded="false" role="menuitem">-->
+<!--                    <div class="am_sub-menu-trigger">-->
+<!--                        <img src="//6979396.fs1.hubspotusercontent-na1.net/hubfs/6979396/raw_assets/public/Amonga/img/menu-arrow.svg">-->
+<!--                    </div>-->
+<!--                </div>-->
+                <ul class="menu__submenu menu__submenu--level-2 no-list">
+                    <li class="menu__item menu__item--depth-2  am_menu-item hs-skip-lang-url-rewrite">
+                        <span class="menu__link">Cloud Amonga</span>
                     </li>
-                    <li class="am_sub-menu-item">
-                        <a class="am_sub-menu-link" href="#">Services</a>
+                    <li class="menu__item menu__item--depth-2  am_menu-item hs-skip-lang-url-rewrite">
+                        <span class="menu__link">Self-hosted</span>
                     </li>
-                    <li class="am_sub-menu-item">
-                        <a class="am_sub-menu-link" href="#">Services</a>
+                    <li class="menu__item menu__item--depth-2  am_menu-item hs-skip-lang-url-rewrite">
+                        <span class="menu__link">Open-source</span>
                     </li>
-                    <li class="am_sub-menu-item">
-                        <a class="am_sub-menu-link" href="#">Demo Version</a>
+                    <li class="menu__item menu__item--depth-2  am_menu-item hs-skip-lang-url-rewrite">
+                        <span class="menu__link">Pricing</span>
+                    </li>
+                </ul>
+
+            </li>
+            <li class="menu__item menu__item--depth-1 menu__item--has-submenu am_menu-item hs-skip-lang-url-rewrite">
+                <a class="menu__link menu__link--toggle" href="#" aria-haspopup="true" aria-expanded="false">Company</a>
+                <ul class="menu__submenu menu__submenu--level-2 no-list">
+                    <li class="menu__item menu__item--depth-2  am_menu-item hs-skip-lang-url-rewrite">
+                        <span class="menu__link">About us</span>
+                    </li>
+                    <li class="menu__item menu__item--depth-2  am_menu-item hs-skip-lang-url-rewrite">
+                        <span class="menu__link">Contact us</span>
                     </li>
                 </ul>
             </li>
-            <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children active-branch am_menu-item" role="none">
-                <a href="#" class="am_menu-link" aria-haspopup="true" aria-expanded="false" role="menuitem">About Us</a>
-            </li>
-            <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children active-branch am_menu-item" role="none">
-                <a href="#" class="am_menu-link" aria-haspopup="true" aria-expanded="false" role="menuitem">Contact
-                    Us</a>
-            </li>
-            <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children active-branch am_menu-item" role="none">
-                <a href="#" class="am_menu-link" aria-haspopup="true" aria-expanded="false" role="menuitem">Services</a>
-            </li>
         </ul>
+
+
         <div class="am_header-btn-block">
             <button class="am_btn am_btn_primary mr-10">Log in</button>
             <button class="am_btn am_btn_outline_primary">Demo version</button>
@@ -74,7 +99,7 @@
                 <img src="img/burger.svg" alt="menu"/>
             </div>
             <div class="am_header-burger-menu">
-                <li class="am_header-burger-menu-wrapper">
+                <div class="am_header-burger-menu-wrapper">
                     <div class="am_header-burger-header">
                         <div class="am_logo-block">Amonga <span class="am_logo-part">Product</span></div>
                         <div class="am_header-burger-close">
@@ -85,56 +110,122 @@
                         <a href="#" class="am_language-btn active">EN</a>
                         <a href="#" class="am_language-btn ">DE</a>
                     </div>
+
                     <ul role="menu" class="active-branch am_menu-block-mobile">
-                        <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children active-branch am_menu-item active"
-                            role="none">
-                            <a href="#" class="am_menu-link active" aria-haspopup="true" aria-expanded="false"
-                               role="menuitem">Product</a>
+                        <li class="menu__item menu__item--depth-1  am_menu-item hs-skip-lang-url-rewrite">
+                            <span class="menu__link">Product</span>
                         </li>
-                        <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children active-branch am_menu-item am_menu-item-has-sub am_menu-item-has-sub--mobile"
-                            role="none">
-                            <div class="am_menu-link am_sub-link" aria-haspopup="true" aria-expanded="false"
-                                 role="menuitem">
-                                Pricing
-                                <div class="am_sub-menu-trigger">
-                                    <img src="img/menu-arrow.svg"/>
-                                </div>
-                            </div>
-                            <ul class="am_sub-menu--mobile">
-                                <li class="am_sub-menu-item">
-                                    <a class="am_sub-menu-link" href="#">Product</a>
+                        <li class="menu__item menu__item--depth-1 menu__item--has-submenu am_menu-item hs-skip-lang-url-rewrite">
+                            <a class="menu__link menu__link--toggle" href="#" aria-haspopup="true"
+                               aria-expanded="false">Industries</a>
+                            <ul class="menu__submenu menu__submenu--level-2 no-list">
+                                <li class="menu__item menu__item--depth-2  am_menu-item hs-skip-lang-url-rewrite">
+                                    <a class="menu__link am_menu-link   " href="https://google.com">Payments</a>
                                 </li>
-                                <li class="am_sub-menu-item">
-                                    <a class="am_sub-menu-link" href="#">Services</a>
+                                <li class="menu__item menu__item--depth-2  am_menu-item hs-skip-lang-url-rewrite">
+                                    <a class="menu__link am_menu-link   " href="https://google.com">EDIFACT</a>
                                 </li>
-                                <li class="am_sub-menu-item">
-                                    <a class="am_sub-menu-link" href="#">Services</a>
+                                <li class="menu__item menu__item--depth-2  am_menu-item hs-skip-lang-url-rewrite">
+                                    <span class="menu__link">Insurance</span>
                                 </li>
-                                <li class="am_sub-menu-item">
-                                    <a class="am_sub-menu-link" href="#">Demo Version</a>
+                                <li class="menu__item menu__item--depth-2  am_menu-item hs-skip-lang-url-rewrite">
+                                    <span class="menu__link">Travel expenses</span>
+                                </li>
+                                <li class="menu__item menu__item--depth-2  am_menu-item hs-skip-lang-url-rewrite">
+                                    <span class="menu__link">Furniture</span>
+                                </li>
+                            </ul>
+
+
+                        </li>
+                        <li class="menu__item menu__item--depth-1 menu__item--has-submenu am_menu-item hs-skip-lang-url-rewrite">
+                            <a class="menu__link menu__link--toggle" href="#" aria-haspopup="true" aria-expanded="false">Amonga
+                                Editions</a>
+                            <!--                <div class="am_menu-link am_sub-link" aria-haspopup="true" aria-expanded="false" role="menuitem">-->
+                            <!--                    <div class="am_sub-menu-trigger">-->
+                            <!--                        <img src="//6979396.fs1.hubspotusercontent-na1.net/hubfs/6979396/raw_assets/public/Amonga/img/menu-arrow.svg">-->
+                            <!--                    </div>-->
+                            <!--                </div>-->
+                            <ul class="menu__submenu menu__submenu--level-2 no-list">
+                                <li class="menu__item menu__item--depth-2  am_menu-item hs-skip-lang-url-rewrite">
+                                    <span class="menu__link">Cloud Amonga</span>
+                                </li>
+                                <li class="menu__item menu__item--depth-2  am_menu-item hs-skip-lang-url-rewrite">
+                                    <span class="menu__link">Self-hosted</span>
+                                </li>
+                                <li class="menu__item menu__item--depth-2  am_menu-item hs-skip-lang-url-rewrite">
+                                    <span class="menu__link">Open-source</span>
+                                </li>
+                                <li class="menu__item menu__item--depth-2  am_menu-item hs-skip-lang-url-rewrite">
+                                    <span class="menu__link">Pricing</span>
+                                </li>
+                            </ul>
+
+                        </li>
+                        <li class="menu__item menu__item--depth-1 menu__item--has-submenu am_menu-item hs-skip-lang-url-rewrite">
+                            <a class="menu__link menu__link--toggle" href="#" aria-haspopup="true" aria-expanded="false">Company</a>
+                            <ul class="menu__submenu menu__submenu--level-2 no-list">
+                                <li class="menu__item menu__item--depth-2  am_menu-item hs-skip-lang-url-rewrite">
+                                    <span class="menu__link">About us</span>
+                                </li>
+                                <li class="menu__item menu__item--depth-2  am_menu-item hs-skip-lang-url-rewrite">
+                                    <span class="menu__link">Contact us</span>
                                 </li>
                             </ul>
                         </li>
-
-                        </li>
-                        <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children active-branch am_menu-item"
-                            role="none">
-                            <a href="#" class="am_menu-link" aria-haspopup="true" aria-expanded="false" role="menuitem">About
-                                Us</a>
-                        </li>
-                        <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children active-branch am_menu-item"
-                            role="none">
-                            <a href="#" class="am_menu-link" aria-haspopup="true" aria-expanded="false" role="menuitem">Contact
-                                Us</a>
-                        </li>
-                        <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children active-branch am_menu-item"
-                            role="none">
-                            <a href="#" class="am_menu-link" aria-haspopup="true" aria-expanded="false" role="menuitem">Services</a>
-                        </li>
                     </ul>
+
+
+                    <!--                    <ul role="menu" class="active-branch am_menu-block-mobile">-->
+                    <!--                        <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children active-branch am_menu-item active"-->
+                    <!--                            role="none">-->
+                    <!--                            <a href="#" class="am_menu-link active" aria-haspopup="true" aria-expanded="false"-->
+                    <!--                               role="menuitem">Product</a>-->
+                    <!--                        </li>-->
+                    <!--                        <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children active-branch am_menu-item am_menu-item-has-sub am_menu-item-has-sub&#45;&#45;mobile"-->
+                    <!--                            role="none">-->
+                    <!--                            <div class="am_menu-link am_sub-link" aria-haspopup="true" aria-expanded="false"-->
+                    <!--                                 role="menuitem">-->
+                    <!--                                Pricing-->
+                    <!--                                <div class="am_sub-menu-trigger">-->
+                    <!--                                    <img src="img/menu-arrow.svg"/>-->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+                    <!--                            <ul class="am_sub-menu&#45;&#45;mobile">-->
+                    <!--                                <li class="am_sub-menu-item">-->
+                    <!--                                    <a class="am_sub-menu-link" href="#">Product</a>-->
+                    <!--                                </li>-->
+                    <!--                                <li class="am_sub-menu-item">-->
+                    <!--                                    <a class="am_sub-menu-link" href="#">Services</a>-->
+                    <!--                                </li>-->
+                    <!--                                <li class="am_sub-menu-item">-->
+                    <!--                                    <a class="am_sub-menu-link" href="#">Services</a>-->
+                    <!--                                </li>-->
+                    <!--                                <li class="am_sub-menu-item">-->
+                    <!--                                    <a class="am_sub-menu-link" href="#">Demo Version</a>-->
+                    <!--                                </li>-->
+                    <!--                            </ul>-->
+                    <!--                        </li>-->
+
+                    <!--                        </li>-->
+                    <!--                        <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children active-branch am_menu-item"-->
+                    <!--                            role="none">-->
+                    <!--                            <a href="#" class="am_menu-link" aria-haspopup="true" aria-expanded="false" role="menuitem">About-->
+                    <!--                                Us</a>-->
+                    <!--                        </li>-->
+                    <!--                        <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children active-branch am_menu-item"-->
+                    <!--                            role="none">-->
+                    <!--                            <a href="#" class="am_menu-link" aria-haspopup="true" aria-expanded="false" role="menuitem">Contact-->
+                    <!--                                Us</a>-->
+                    <!--                        </li>-->
+                    <!--                        <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children active-branch am_menu-item"-->
+                    <!--                            role="none">-->
+                    <!--                            <a href="#" class="am_menu-link" aria-haspopup="true" aria-expanded="false" role="menuitem">Services</a>-->
+                    <!--                        </li>-->
+                    <!--                    </ul>-->
+                </div>
             </div>
         </div>
-    </div>
     </div>
 
     <script>
@@ -152,8 +243,9 @@
       toggleMenu();
 
       function subMenuToggle() {
-        $(".am_menu-item-has-sub").on("click", function () {
-          $(".am_menu-item-has-sub").toggleClass("open");
+        $(".menu__item--has-submenu").on("click", function () {
+          $(".menu__item--has-submenu").not($(this)).removeClass("active");
+          $(this).toggleClass("active");
         })
       }
 
