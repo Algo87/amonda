@@ -299,7 +299,7 @@
 </div>
 <div class="am_bg-grey am_section-padding">
     <style>
-        .am_video{
+        .am_video {
             width: 938px;
             max-width: 100%;
             height: auto;
@@ -312,7 +312,7 @@
     <div class="am_content">
         <h2 class="am_h2">Overview Of Our Product</h2>
         <div class="am_video">
-            <img style="max-width: 100%;" src="img/main-img.png" />
+            <img style="max-width: 100%;" src="img/main-img.png"/>
         </div>
     </div>
 </div>
@@ -947,9 +947,13 @@
             border-radius: 24px;
             padding: 32px;
             min-height: 100%;
-            width: 30% !important;
-            /*display: flex!important;*/
-            /*align-items: stretch;*/
+            min-width: calc(50% - 32px);
+            max-width:calc(50% - 32px);
+        }
+
+        .am_pricing-slider.slick-slider {
+            max-width: 950px;
+            margin: 0 auto;
         }
 
         .am_pricing-block .slick-slide {
@@ -970,6 +974,19 @@
 
         .am_pricing-block .slick-list {
             margin: 0 -16px;
+        }
+
+        @media screen and (max-width: 1023px) {
+            .am_pricing-slider.slick-slider {
+                max-width: 100%;
+                /*margin: 0 auto;*/
+            }
+            .am_pricing-slider-item {
+
+                min-width: calc(100% - 32px);
+                max-width:calc(100% - 32px);
+
+            }
         }
     </style>
     <h3 class="am_h3">Amonga Pricing</h3>
@@ -1047,35 +1064,41 @@
             </div>
             <a href="/" class="am_btn am_btn_primary am_w-100">Get Started</a>
         </div>
-
+        <div class="am_pricing-slider-item">
+            <div>
+                <h5 class="am_pricing-title">The Starter Pack</h5>
+                <div class="am_price-sum">300.99 <span class="am_price-sum-sub">/mo</span></div>
+                <div> The perfect way to start your journey
+                    with Quickly. All the main features great
+                    for small teams
+                </div>
+                <ul class="am_price-list">
+                    <li class="am_price-list-item">Project tracking</li>
+                    <li class="am_price-list-item">24 hour support</li>
+                    <li class="am_price-list-item">Unlimited tasks</li>
+                    <li class="am_price-list-item">Roadmap planning</li>
+                </ul>
+            </div>
+            <a href="/" class="am_btn am_btn_primary am_w-100">Get Started</a>
+        </div>
     </div>
 
     <script defer>
       $(".am_pricing-slider").slick({
-        infinite: true,
-        slidesToShow: 4,
+        infinite: false,
+        slidesToShow: 2,
         slidesToScroll: 1,
         swipe: true,
+        centerMode: false,
         adaptiveHeight: true,
+        customPadding: '15px',
         responsive: [
-          {
-            breakpoint: 1200,
-            settings: {
-              // variableWidth: true,
-
-              // centerMode: true,
-              slidesToShow: 3,
-              slidesToScroll: 1,
-              infinite: true,
-              dots: true
-            }
-          },
           {
             breakpoint: 1023,
             settings: {
+              infinite: false,
               variableWidth: false,
-
-              enterMode: false,
+              centerMode: false,
               slidesToShow: 1,
               slidesToScroll: 1
             }
