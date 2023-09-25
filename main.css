@@ -433,7 +433,7 @@ body {
     padding-right: 16px;
 }
 
-.menu__item--has-submenu:before {
+.am_content .menu__item--has-submenu:before {
     position: absolute;
     content: "";
     width: 32px;
@@ -443,8 +443,13 @@ body {
     background-image: url("img/menu-arrow.svg");
     background-position: center;
     background-repeat: no-repeat;
+    background-color: transparent;
     transform: rotate(0deg);
     transition: 0.3s;
+}
+
+.am_content .am_menu-item:before {
+    background-color: transparent;
 }
 
 .menu__item--has-submenu.active:before {
