@@ -702,6 +702,11 @@ header{
     align-items: center;
     border-radius: 50%;
     margin: 0 4px;
+    color:#fff;
+}
+.am_footer-social-title{
+    font-size: 18px;
+    padding-bottom: 8px;
 }
 .am_footer-pb-desc{
     padding-bottom: 50px;
@@ -747,9 +752,18 @@ header{
         flex-wrap: wrap;
         gap: 40px;
     }
-
+    .am_footer-text-social{
+        display: flex;
+        gap: 60px;
+    }
+    .am_footer-text:first-child,
     .am_footer-text {
-        width: 100%;
+        width: 100% !important;
+        max-width: 100%;
+    }
+    .am_footer-social-links{
+        flex-direction: column;
+        gap: 10px;
     }
 
     .am_footer-links {
@@ -761,6 +775,7 @@ header{
     .am_footer-block {
         gap: 40px;
     }
+
 }
 
 /*********** END FOOTER ********/
