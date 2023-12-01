@@ -752,6 +752,10 @@ header{
 
 }
 
+.am_footer-social-link:hover{
+    background-color: #015767;
+}
+
 .am_footer-links li:before {
     display: none;
 }
